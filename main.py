@@ -2,7 +2,8 @@
 #Proyecto 2 Algoritmos
 from Connectar import *
 
-nombre = input("Ingrese nombre de restaurante")
+nombre = input("Ingrese nombre de restaurante: ")
+nombre =str(nombre)
 agregarRestaurante(nombre)
 print("Bienvenido a nuestra aplicacion RESTAUNATOS\n")
 menu = input("Que desea hacer?\n\n"
