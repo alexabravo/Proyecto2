@@ -50,7 +50,8 @@ while (menu!="4"):
         menu =str(input(": "))
     if menu =="2":
         nombre = str(raw_input("Ingrese su nombre: "))
-        
+        reco = recomendar(nombre,Preferencias(),nombre,Preferencias())
+        print(reco)
         print(inicio)
         menu =str(input(": "))
     if menu =="3":

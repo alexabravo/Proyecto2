@@ -53,4 +53,57 @@ def restauranteEstilo (name, estilo):
 
 #Fuciones para logaritmo
 def recomendar(cliente, clientes,restaurante,restaurantes):
+        
+    inicioCliente = buscar(cliente,clientes)
+    inicioRestaurante = buscar(restaurante,restaurantes)
+    
+    tamañoCliente = len(clientes)
+    tamañoRestaurante = len(restaurantes)
+
+    preferenciasClientes = Preferencias(cliente, clientes)
+    preferenciasRestaurantes = Preferencias(restaurante, restaurantes)
+    for i in range(0,tamañoCliente):
+        com=comun(preferenciasClientes[inicioCliente],preferenciasClientes[i])
+    for i in range(0,tamañoRestaurante):
+        com=comun(tamañoRestaurante[inicioRestaurante],tamañoRestaurante[i])
+    return com
+
+
+    
+    
+def buscar(objeto, listaObjeto):
+    a=-1
+    if objeto in listaObjeto:
+        a=listaCliente.index(objeto)
+    return a
+
+def Preferencia(name):
+    buscar="match (Cliente{nombre:'"+name+"'})-[x]->(d) return x,d"
+    resul = gdb.query(buscar, data_contents=True)
+    lista = resul.rows
+    y=[]
+    if lista is not None:
+        for x in lista:  
+            for i in x: 
+                for c in i:
+                    if c is not None:
+                        y.append(i[c])
+    return y
+
+def Preferencias(objeto, listaObjeto):
+    y=[]
+    for x in listaObjeto:
+        a=Preferencia(x)
+        if a is not None:
+            y.append(a)
+    return y
+
+def comun(busca, buscado):
+    y=[]
+    for x in buscado:
+        if x in busca:
+            if x not in y:
+                y.append(x)
+    return y
+
 
