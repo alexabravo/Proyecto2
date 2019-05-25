@@ -3,7 +3,7 @@
 #Recomendar restaurantes
 from Connectar import *
 print("O _ 0 Bienvenido a nuestra aplicacion RESTAUNATOS O _ 0\n")
-inicio = ("Que desea hacer?  (Ingrese numero)\n\n"
+inicio = ("\n""Que desea hacer?  (Ingrese numero)\n\n"
              "1. Iniciar Sesion\n"
              "2. Comer Ya!\n"
              "3. Administrador\n"
@@ -49,6 +49,7 @@ while (menu!="4"):
         print(inicio)
         menu =str(input(": "))
     if menu =="2":
+        nombre = str(raw_input("Ingrese su nombre: "))
         
         print(inicio)
         menu =str(input(": "))
@@ -56,7 +57,7 @@ while (menu!="4"):
         nombreRestaurante = str(raw_input("Ingrese nombre de restaurante: "))
         agregarRestaurante(nombreRestaurante)
 
-        preguntaEstilo =str(input("Que estilo y precio de comida pertenece? (Ingrese numero)\n"
+        preguntaEstilo =str(input("\n""Que estilo y precio de comida pertenece? (Ingrese numero)\n"
                                    "1. Comida rapida, Accesible\n"
                                    "2. Comida elegante, Alto\n"
                                    "3. Comida saludable, Regular\n"
@@ -71,7 +72,7 @@ while (menu!="4"):
         if preguntaEstilo=="4":
             styleRes = "Comida Casera"
         restauranteEstilo(nombreRestaurante,styleRes)
-        preguntaPreferencia =str(input("Que le da mas importancia a su restaurante? (Ingrese numero)\n"
+        preguntaPreferencia =str(input("\n""Que le da mas importancia a su restaurante? (Ingrese numero)\n"
                                    "1. Ambiente del lugar\n"
                                    "2. Sabor de la comida\n"
                                    "3. Precio de la comida\n"

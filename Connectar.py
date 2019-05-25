@@ -52,8 +52,5 @@ def restauranteEstilo (name, estilo):
     
 
 #Fuciones para logaritmo
-def buscaruno(cliente, listaCliente):
-    a=-1
-    if cliente in listaCliente:
-        a=listaCliente.index(cliente)
-    return a
+def recomendar(cliente, clientes,restaurante,restaurantes):
+
