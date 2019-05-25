@@ -3,7 +3,9 @@
 from Connectar import *
 
 nombre = str(raw_input("Ingrese nombre de restaurante: "))
-agregarRestaurante(nombre)
+est = str(raw_input("Ingrese nombre de Estilo: "))
+
+agregarEstilo(nombre,est)
 print("Bienvenido a nuestra aplicacion RESTAUNATOS\n")
 menu = input("Que desea hacer?\n\n"
              "1. Comer Ya!\n"
